@@ -18,7 +18,7 @@ def pymkdir(full_folder_path, command_line_args):
     full_initfile_path = os.path.join(full_folder_path, "__init__.py")
     folder_unicode = "\U0001F4C2"
 
-    print(f" _ . * . {folder_unicode}  Pymkdir {folder_unicode} . * . _")
+    print(f" _ . * . {folder_unicode}  pymkdir {folder_unicode} . * . _")
 
     print(f"Creating the folder {full_folder_path}...")
     os.mkdir(full_folder_path)

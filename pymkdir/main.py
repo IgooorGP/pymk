@@ -17,7 +17,7 @@ def python_mkdir():
     command_line_args = get_command_line_args()
 
     folder_name = command_line_args.get("folder")
-    file_path = os.path.join(command_line_args.get("directory"))
+    file_path = os.path.join(command_line_args.get("path"))
     full_folder_path = os.path.join(file_path, folder_name)
 
     if os.access(os.path.dirname(full_folder_path), os.W_OK):
