@@ -1,7 +1,7 @@
 # pymkdir
 
 A command line utility to create python folders (folders with ```__init__.py```) to quickly create Python packages
-without the burden of creating new folders with an ```__init__.py``` file in it.
+without the burden of manually creating new folders and then an ```__init__.py``` file in it.
 
 ## Python Packages
 
