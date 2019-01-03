@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name="pymkdir",
-    version="0.2",
+    version="1.0",
     url="https://github.com/IgooorGP/pymkdir",
     license="MIT",
     author="Igor Grillo Peternella",
@@ -17,4 +17,4 @@ setup(
     long_description=open("README.md").read(),
     zip_safe=False,
 )
-    
+
