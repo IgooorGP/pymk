@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name="pymkdir",
-    version="0.1",
+    version="0.2",
     url="https://github.com/IgooorGP/pymkdir",
     license="MIT",
     author="Igor Grillo Peternella",
@@ -13,6 +13,8 @@ setup(
     description="Create python folders with __init__.py files automagically!",
     packages=["pymkdir"],
     entry_points={"console_scripts": ["pymkdir=pymkdir.main:python_mkdir"]},
+    install_requires=[],
     long_description=open("README.md").read(),
     zip_safe=False,
 )
+    

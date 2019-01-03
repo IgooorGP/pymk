@@ -1,6 +1,9 @@
 """
-Main module.
+Main module to be used as entry point of the pymkdir library.
 """
+
+from __future__ import print_function, unicode_literals
+
 import os
 
 from pymkdir.argparser import get_command_line_args
@@ -23,13 +26,13 @@ def python_mkdir():
     if os.access(os.path.dirname(full_folder_path), os.W_OK):
 
         if os.path.exists(full_folder_path):
-            print(f"Ops! Looks like there's folder at {full_folder_path} already! Can't proceed.")
+            print("Ops! Looks like there's folder at %s already! Can't proceed." % full_folder_path)
 
         else:
             pymkdir(full_folder_path, command_line_args)
 
     else:
-        print(f"Sorry, no writing permission at the directory: {file_path}. Perhaps, use sudo?")
+        print("Sorry, no writing permission at the directory: %s. Perhaps, use sudo?" % file_path)
 
 
 if __name__ == "__main__":

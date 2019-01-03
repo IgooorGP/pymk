@@ -3,10 +3,9 @@ Module which holds all the functions required to parse command line
 arguments.
 """
 import argparse
-from typing import Dict, Optional
 
 
-def get_command_line_args() -> Dict[str, Optional[str]]:
+def get_command_line_args():
     """
     Command line arguments parser. Returns the command-line arguments
     that were input by the user.
@@ -19,7 +18,7 @@ def get_command_line_args() -> Dict[str, Optional[str]]:
     """
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-f", "--folder", required=True)
+    parser.add_argument("folder")  # folder name is a required arg
     parser.add_argument("-p", "--path", default="./")
     parser.add_argument("-e", "--empty", default=None, nargs="?", const=True)
 
