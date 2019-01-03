@@ -15,20 +15,22 @@ def pymkdir(full_folder_path, command_line_args):
         full_folder_path (str): full folder path for the folder creation;
         command_line_args (dict): dict with the user command line arguments.
     """
-    full_initfile_path = os.path.join(full_folder_path, "__init__.py")
-    folder_unicode = "\U0001F4C2"
+    if os.path.exists(full_folder_path):
+        print("Ops! Looks like there's folder at %s already! Can't proceed." % full_folder_path)
 
-    # print(f" _ . * . {folder_unicode}  pymkdir {folder_unicode} . * . _")
-    print(" _ . * . %s  pymkdir %s . * . _" % (folder_unicode, folder_unicode))
+    else:
+        full_initfile_path = os.path.join(full_folder_path, "__init__.py")
+        folder_unicode = "\U0001F4C2"
 
-    # print(f"Creating the folder {full_folder_path}...")
-    print("Creating the folder %s..." % full_folder_path)
-    os.mkdir(full_folder_path)
+        print(" _ . * . %s  pymkdir %s . * . _" % (folder_unicode, folder_unicode))
+        print("Creating the folder %s..." % full_folder_path)
 
-    if not command_line_args.get("empty"):
-        print("Creating the __init__.py file...")
+        os.mkdir(full_folder_path)
 
-        file = open(full_initfile_path, "w")
-        file.close()
+        if not command_line_args.get("empty"):
+            print("Creating the __init__.py file...")
 
-    print("Done!")
+            file = open(full_initfile_path, "w")
+            file.close()
+
+        print("Done!")
